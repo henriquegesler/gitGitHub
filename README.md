@@ -1,6 +1,5 @@
 ## Git e GitHub - Comandos e conceitos.
 Comando: |	Descrição:
-<table>
 ------------ | -------------
 git config --local user.name | "Seu nome"	Define o nome localmente.
 git config --local user.email | "Seu e-mail"	Define o endereço de e-mail localmente.
@@ -67,6 +66,8 @@ git tag -a versao-0.1.0 -m "Lançando a primeira versão." |	Cria um ponto que n
 git tag |	Lista as versões.
 git push origin main versao-0.1.0 |	Subindo a versão.
 git cherry-pick id-commit |	Selecionar commit específico para trazer ao branch desejado.
+git config --global init.defaultBranch main |	Configurando o git para iniciar sempre com a branch main ao invés da master (git init). A partir da versão 2.28.
+<table>
  <tr>
     <td>
       git bisect start<br>
@@ -78,6 +79,4 @@ git cherry-pick id-commit |	Selecionar commit específico para trazer ao branch 
       Achar um commit que quebra o build do projeto. <br>Indica um commit que contém um estado bom do seu repositório (good) e um commit que contém um estado ruim do seu repositório (bad). Com isso o git vai realizando checkouts, seguindo uma busca binária, e você pode indicar se o estado é bom ou ruim. Ao final, o git lhe diz qual commit danificou o repositório.
     </td>
   </tr>
-git config --global init.defaultBranch main |	Configurando o git para iniciar sempre com a branch main ao invés da master (git init). A partir da versão 2.28.
-
 </table>
