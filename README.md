@@ -24,7 +24,7 @@ git log --help |	Ver algumas opções disponíveis.
 git log cheatsheet |	Comandos para personalizar a busca de logs.
 gitk |	Visualizador de histórico gráfico.
 git init --bare |	Cria um repositório que não terá a working tree, ou seja, não conterá uma cópia dos arquivos. Como o repositório servirá apenas como servidor, para que outros membros da equipe sincronizem seus trabalhos, poupa espaço de armazenamento desta forma.
-git remote add nome-repositorio caminho/para/o/repositorio	Desta forma teremos um link do repositório local com o repositório remoto, que chamamos de nome-repositorio, que está armazenado em caminho/para/o/repositorio.
+git remote add nome-repositorio caminho/para/o/repositorio |	Desta forma teremos um link do repositório local com o repositório remoto, que chamamos de nome-repositorio, que está armazenado em caminho/para/o/repositorio.
 git remote |	Lista os remotes.
 git remote -v |	Lista os nomes e endereços.
 git remote rename nome-atual novo-nome |	Renomea o remote.
@@ -67,16 +67,3 @@ git tag |	Lista as versões.
 git push origin main versao-0.1.0 |	Subindo a versão.
 git cherry-pick id-commit |	Selecionar commit específico para trazer ao branch desejado.
 git config --global init.defaultBranch main |	Configurando o git para iniciar sempre com a branch main ao invés da master (git init). A partir da versão 2.28.
-<table>
- <tr>
-    <td>
-      git bisect start<br>
-      git bisect good commit<br>
-      git bisect bad commit<br>
-      git bisect reset
-    </td>
-    <td>
-      Achar um commit que quebra o build do projeto. <br>Indica um commit que contém um estado bom do seu repositório (good) e um commit que contém um estado ruim do seu repositório (bad). Com isso o git vai realizando checkouts, seguindo uma busca binária, e você pode indicar se o estado é bom ou ruim. Ao final, o git lhe diz qual commit danificou o repositório.
-    </td>
-  </tr>
-</table>
